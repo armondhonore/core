@@ -1,0 +1,12 @@
+application:
+  name: cheshire-cat
+  pods:
+  - name: app
+    image: ghcr.io/cheshire-cat-ai/core:latest
+    path: /
+    servicePorts:
+    - 1865
+    volumes:
+    - name: cat-data
+      mountPath: /app/cat/data
+      size: 5Gi
