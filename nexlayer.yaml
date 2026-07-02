@@ -1,12 +1,9 @@
 application:
-  name: cheshire-cat
+  name: core
   pods:
-  - name: app
-    image: ghcr.io/cheshire-cat-ai/core:latest
-    path: /
-    servicePorts:
-    - 1865
-    volumes:
-    - name: cat-data
-      mountPath: /app/cat/data
-      size: 5Gi
+    - name: app
+      image: "registry.nexlayer.io/user_01kece1xyh817dwff7wnarhkxd/core:19f21468186"
+      path: /
+      servicePorts:
+        - 80
+      vars: {}
